@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Image Gallery</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Image Grid -->
+    <div class="gallery">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070810108.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070827170.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070838091.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070854965.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070864335.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070867113.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070874948.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070876196.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070877521.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070879274.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070882415.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070883312.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070886085.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070337178.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070342096.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070344959.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070347503.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070350376.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070366639.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070368593.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070819983.jpeg"> 
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070334732.jpeg">
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070859282.jpeg"> 
+        <img onclick="openFullImg(this.src)" src="./image/HelloIMG1725070331214.jpeg"> 
+        <img onclick="openFullImg(this.src)" src="./image/images.jpg">
+        <img onclick="openFullImg(this.src)" src="./image/1677167041761.jfif">
+    </div>
+
+
+    <!-- Full Image Display -->
+    <div id="box" class="full-img-box">
+        <img id="fullImg" src="" alt="Full Image">
+    </div>
+
+
+
+    <!-- Footer section -->
+    <footer>
+        All copyrights Rights Reserved © 2024
+    </footer>
+
+    <!-- Back to Top -->
+
+    <a href="#" id="back-to-top" title="Back to Top">&uarr;</a>
+
+<script>   
+    let backToTopButton = document.getElementById("back-to-top");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+    backToTopButton.onclick = function(e) {
+        e.preventDefault();
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+
+        var box = document.getElementById("box");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic){
+            box.style.display = "flex";
+            fullImg.src = pic;
+        }
+
+        box.addEventListener('click', function(){
+            box.style.display = "none";
+        });
+    </script>
+    
+</body>
+</html>
